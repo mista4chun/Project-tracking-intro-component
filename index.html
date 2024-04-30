@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Simple Tailwind Starter</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <nav class="container mx-auto px-6 mt-10 flex items-center justify-between">
+      <!-- Logo -->
+      <img src="images/logo.svg" alt="" />
+
+      <!-- Menu -->
+      <div class="relative hidden items-center space-x-10 z-10 md:flex">
+        <a
+          href="#"
+          class="uppercase tracking-wide font-semibold hover:underline"
+          >Product</a
+        >
+        <a
+          href="#"
+          class="uppercase tracking-wide font-semibold hover:underline"
+          >Features</a
+        >
+        <a
+          href="#"
+          class="uppercase tracking-wide font-semibold hover:underline"
+          >Pricing</a
+        >
+        <div class="bg-dot"></div>
+
+        <a
+          href="#"
+          class="uppercase tracking-wide text-gray-400 hover:underline"
+          >login</a
+        >
+      </div>
+
+      <!-- @ hamburger -->
+
+      <button
+        id="menu-btn"
+        class="block hamburger md:hidden focus:outline-none"
+      >
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </nav>
+    <!-- Menu -->
+    <div class="md:hidden">
+      <div
+        id="menu"
+        class="absolute z-30 flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+      >
+        <a
+          href="#"
+          class="uppercase tracking-wide font-semibold hover:underline"
+          >Product</a
+        >
+        <a
+          href="#"
+          class="uppercase tracking-wide font-semibold hover:underline"
+          >Features</a
+        >
+        <a
+          href="#"
+          class="uppercase tracking-wide font-semibold hover:underline"
+          >Pricing</a
+        >
+        <div class="w-96 border-t-2 border-gray-200 pt-3 text-center">
+          <a
+            href="#"
+            class="uppercase tracking-wide text-gray-400 hover:underline"
+            >LOGIN</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <section id="hero ">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col-reverse mt-32 mb-20 md:flex-row md:space-y-0 md:space-x-20"
+        >
+          <!-- Content -->
+          <div class="flex flex-col space-y-5 mt-10 md:w-1/2">
+            <div class="flex items-center space-x-3">
+              <div class="rounded-full bg-gray-800 px-2 text-white">New</div>
+              <h2 class="text-gray-500 font-thin uppercase tracking-widest">
+                Monograph dashboard
+              </h2>
+            </div>
+            <h1 class="text-6xl max-w-2xl font-semibold uppercase">
+              Powerful insights into your team
+            </h1>
+            <p class="text-xl max-w-xs pt-2 text-gray-500">
+              Project Planning and time tracking for agile team
+            </p>
+            <div class="flex items-center pt-5 md:pt-8 space-x-4">
+              <button
+                class="py-3 px-6 bg-red-500 hover:bg-red-400 rounded text-white"
+              >
+                SCHEDULE A DEMO
+              </button>
+              <h2 class="text-gray-500 font-thin uppercase tracking-widest">
+                To see a preview
+              </h2>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div
+            class="relative flex items-center mx-auto w-fit md:mx-0 md:w-1/2"
+          >
+            <div class="bg-hero hidden md:block"></div>
+            <img
+              src="images/illustration-devices.svg"
+              alt=""
+              class="relative"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
