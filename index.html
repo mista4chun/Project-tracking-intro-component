@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -14,15 +14,20 @@
     <title>Simple Tailwind Starter</title>
   </head>
   <body class="overflow-x-hidden">
-    <nav class="container mx-auto px-6 mt-10 flex items-center justify-between">
+    <nav
+      role="navigation"
+      class="container mx-auto px-6 mt-20 flex items-center justify-between"
+    >
       <!-- Logo -->
       <img src="images/logo.svg" alt="" />
 
       <!-- Menu -->
-      <div class="relative hidden items-center space-x-10 z-10 md:flex">
+      <div
+        class="relative hidden items-center text-sans space-x-10 z-20 md:flex"
+      >
         <a
           href="#"
-          class="uppercase tracking-wide font-semibold hover:underline"
+          class="uppercase tracking-wider font-semibold hover:underline"
           >Product</a
         >
         <a
@@ -48,7 +53,7 @@
 
       <button
         id="menu-btn"
-        class="block hamburger md:hidden focus:outline-none"
+        class="block hamburger z-30 md:hidden focus:outline-none"
       >
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
@@ -59,7 +64,7 @@
     <div class="md:hidden">
       <div
         id="menu"
-        class="absolute z-30 flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        class="absolute z-30 flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white max-w-sm mx-auto sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
       >
         <a
           href="#"
@@ -76,7 +81,7 @@
           class="uppercase tracking-wide font-semibold hover:underline"
           >Pricing</a
         >
-        <div class="w-96 border-t-2 border-gray-200 pt-3 text-center">
+        <div class="w-80 border-t-2 border-gray-200 pt-3 text-center">
           <a
             href="#"
             class="uppercase tracking-wide text-gray-400 hover:underline"
@@ -85,43 +90,60 @@
         </div>
       </div>
     </div>
-    <!-- Hero Section -->
-    <section id="hero ">
-      <div class="container mx-auto px-6">
+    <main role="main">
+      <div class="container mx-auto px-6 mt-44">
+        <div class="hidden items center space-x-4 mb-3 md:flex">
+          <div
+            class="rounded-full bg-veryDarkBlue text-white px-3 font-semibold tracking-tight"
+          >
+            NEW
+          </div>
+          <div class="text-grayishBlue uppercase tracking-[0.3rem]">
+            Monograph Dashboard
+          </div>
+        </div>
+        <!-- Grid Container -->
         <div
-          class="flex flex-col-reverse mt-32 mb-20 md:flex-row md:space-y-0 md:space-x-20"
+          class="grid grid-cols-1 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-10"
         >
-          <!-- Content -->
-          <div class="flex flex-col space-y-5 mt-10 md:w-1/2">
-            <div class="flex items-center space-x-3">
-              <div class="rounded-full bg-gray-800 px-2 text-white">New</div>
-              <h2 class="text-gray-500 font-thin uppercase tracking-widest">
-                Monograph dashboard
-              </h2>
-            </div>
-            <h1 class="text-6xl max-w-2xl font-semibold uppercase">
-              Powerful insights into your team
-            </h1>
-            <p class="text-xl max-w-xs pt-2 text-gray-500">
-              Project Planning and time tracking for agile team
-            </p>
-            <div class="flex items-center pt-5 md:pt-8 space-x-4">
-              <button
-                class="py-3 px-6 bg-red-500 hover:bg-red-400 rounded text-white"
+          <!-- Text Container -->
+
+          <div
+            class="flex flex-col order-last col-span-2 space-y-5 md:space-y-0 md:-space-x-96"
+          >
+            <div class=" flex items center space-x-4 md:hidden">
+              <div
+                class="rounded-full bg-veryDarkBlue text-white px-3 font-semibold tracking-tight"
               >
-                SCHEDULE A DEMO
+                NEW
+              </div>
+              <div class="text-grayishBlue uppercase tracking-[0.3rem]">
+                Monograph Dashboard
+              </div>
+            </div>
+            <h1
+              class="text-4xl max-w-xs md:max-w-md uppercase font-bold text-veryDarkBlue md:text-6xl"
+            >
+              Powerful Insights into your team
+            </h1>
+            <p class="text-darkGrayishBlue max-w-xs tracking-wide text-2xl">
+              Project planning and time tracking for agile teams
+            </p>
+            <!-- Button Container -->
+            <div class="flex items-center md:pt-7 space-x-6">
+              <button
+                class="px-8 py-3 bg-Red rounded-md font-semibold text-white hover:opacity-80 uppercase"
+              >
+                schedule a demo
               </button>
-              <h2 class="text-gray-500 font-thin uppercase tracking-widest">
-                To see a preview
-              </h2>
+              <div class="text-grayishBlue uppercase tracking-[0.3rem]">
+                to see a preview
+              </div>
             </div>
           </div>
-
           <!-- Image -->
-          <div
-            class="relative flex items-center mx-auto w-fit md:mx-0 md:w-1/2"
-          >
-            <div class="bg-hero hidden md:block"></div>
+          <div class="relative w-screen scale-125 ml-20 -mt-10 md:ml-[1070px]">
+            <div class="bg-hero"></div>
             <img
               src="images/illustration-devices.svg"
               alt=""
@@ -130,6 +152,6 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
   </body>
 </html>

@@ -2,16 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-hero {
-  width: 1000px;
-  height: 450px;
-  top: -60%;
-  @apply absolute rounded-bl-[48px]   left-0  bg-gray-100;
-}
 .bg-dot {
   width: 5px;
   height: 5px;
   @apply rounded-full bg-gray-300;
+}
+
+@media (max-width: 576px) {
+  .bg-hero {
+    width: 500px;
+    height: 450px;
+    top: -50%;
+    @apply absolute rounded-bl-[48px] left-40 bg-lightGrayishBlue;
+  }
+}
+@media (max-width: 468px) {
+  .bg-hero {
+    width: 500px;
+    height: 450px;
+    top: -60%;
+    @apply absolute rounded-bl-[48px] left-32 bg-lightGrayishBlue;
+  }
+}
+@media (min-width: 1440px) {
+  .bg-hero {
+    width: 1000px;
+    height: 450px;
+    top: -60%;
+    @apply absolute rounded-bl-[48px]   left-0 bg-lightGrayishBlue;
+  }
 }
 
 /* Hamburger */
